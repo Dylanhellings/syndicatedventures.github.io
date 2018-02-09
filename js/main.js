@@ -8,6 +8,11 @@
 	});
 
 	///////////////////////////
+	// adding contact - real estate
+
+
+
+	///////////////////////////
 	// Scrollspy
 	$('body').scrollspy({
 		target: '#nav',
@@ -22,6 +27,22 @@
 		$('html, body').animate({
 			scrollTop: $(this.hash).offset().top
 		}, 600);
+	});
+
+	$('#learn-more-btn').on('click', function(e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: $('#whatwedo').offset().top
+		}, 600);
+	})
+
+	$('#contact-realestate-btn').on('click', function(e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: $('#contact').offset().top
+		}, 600);
+		$('input[name="subject"]').val('Real Estate Inquiry');
+		$('input[name="name"]').focus();
 	});
 
 	$('#back-to-top').on('click', function(){
